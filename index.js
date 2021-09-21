@@ -1,6 +1,4 @@
 const express = require('express'); //Import the express dependency
-const simple_oauth2 = require('simple-oauth2'); //Import the express dependency
-const simple_oauth2_app = simple_oauth2();              //Instantiate an express express_app, the main work horse of this server
 const express_app = express();              //Instantiate an express express_app, the main work horse of this server
 const port = 80;                  //Save the port number where your server will be listening
 
@@ -13,3 +11,18 @@ express_app.get('/', (req, res) => {        //get requests to the root ("/") wil
 express_app.listen(port, () => {            //server starts listening for any attempts from a client to connect at port: {port}
     console.log(`Now listening on port ${port}`); 
 });
+
+const config = {
+    client: {
+      client_id: 'JCzqxaWp6pZ8zJodVpc3eTSvsxTT6rxhr74FUfhJUNBS7gkSN2lAZG4VzEqR2Adi',
+      redirect_uri: '<client-id>',
+      scope: '<client-id>',
+      state: '<client-id>',
+      response_type: 'code'
+    },
+    auth: {
+      tokenHost: 'https://api.genius.com/oauth/authorize?'
+    }
+  };
+  
+  const { ClientCredentials, ResourceOwnerPassword, AuthorizationCode } = require('simple-oauth2');
