@@ -1,0 +1,27 @@
+{
+  "name": "musicmatch",
+  "version": "1.0.0",
+  "description": "This is an aplication to meet new music related at your preferences",
+  "main": "index.js",
+  "scripts": {
+    "test": "console.log('Index working');"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GRIBUSKUN/music_match.git"
+  },
+  "keywords": [
+    "Music",
+    "Match"
+  ],
+  "author": "Vogath",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GRIBUSKUN/music_match/issues"
+  },
+  "homepage": "https://github.com/GRIBUSKUN/music_match#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "simple-oauth2": "^4.2.0"
+  }
+}
